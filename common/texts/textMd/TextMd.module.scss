@@ -1,0 +1,11 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.textMd {
+  @include textGroupMdBold;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+}

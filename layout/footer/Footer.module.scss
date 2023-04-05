@@ -1,0 +1,24 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  padding: 1.4rem;
+  background-color: $black;
+  @include flexRowCenterCenter;
+  & p {
+    margin: 0;
+    color: $white;
+    font-family: $timesRoman;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+}

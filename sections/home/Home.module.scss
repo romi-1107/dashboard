@@ -1,0 +1,33 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+
+.mainContainer {
+  margin-top: 6rem;
+  padding: 1rem 2rem 8rem 2rem;
+}
+
+.eventListContainer {
+  margin-top: 2rem;
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.05);
+  background-color: $white;
+  padding: 1rem 2rem 5rem 2rem;
+  @include mobile {
+    & h1 {
+      text-align: center;
+    }
+  }
+}
+
+.headingContainer {
+  @include flexRowBetweenCenter;
+  @include mobile {
+    & img {
+      display: none;
+    }
+    & h1 {
+      text-align: center;
+    }
+  }
+}

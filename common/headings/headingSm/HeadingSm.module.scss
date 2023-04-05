@@ -1,0 +1,12 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.headingSm {
+  @include headingGroupSmBold;
+  @include mobile {
+    @include textGroupLgBold;
+  }
+}

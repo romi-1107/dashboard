@@ -1,0 +1,276 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+@mixin eventInput {
+  border: 0.1rem solid $darkGrey;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  & ::placeholder {
+    color: $dustyGrey;
+    font-weight: 300;
+    font-family: $interSans;
+    font-size: 1.2rem;
+  }
+}
+
+@mixin bannerLogoPlaceholder {
+  @include flexColumnCenterCenter;
+  background-color: $ghostWhite;
+  &:hover {
+    cursor: pointer;
+  }
+  & p {
+    text-align: center;
+    max-width: 9rem;
+  }
+}
+
+@mixin textAreaFont {
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: $interSans;
+  line-height: 2rem;
+  color: $silver;
+}
+
+@mixin colorCircle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.eventFormContainer {
+  margin-bottom: 2rem;
+}
+.setupFromContaine {
+  @include flexRowBetweenCenter;
+  gap: 2rem;
+}
+.eventForm {
+  display: grid;
+  grid-template-columns: 20rem calc(100% - 20rem);
+  gap: 2rem;
+  margin-top: 5rem;
+  @include tablet {
+    grid-template-columns: 100%;
+  }
+  & .inputContainer {
+    border-left: 0.1rem solid rgba($color: $black, $alpha: 0.2);
+    padding: 0 2rem;
+    @include tablet {
+      border-left: 0;
+      padding: 0;
+    }
+    & p {
+      margin-top: 0;
+    }
+  }
+  & .infoText {
+    @include textGroupXsLight;
+    font-family: $interSans;
+    line-height: 2rem;
+    & span {
+      color: $darkBlue;
+    }
+  }
+}
+.charLeftContainer {
+  @include flexRowEndCenter;
+  width: 100%;
+  & p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    font-family: $interSans;
+    color: $black;
+  }
+}
+.inputWrapper {
+  @include flexColumnStartStart;
+  gap: 1rem;
+  & label {
+    @include textGroupSmBold;
+  }
+  & input {
+    @include eventInput;
+  }
+}
+
+.URLContainer {
+  background-color: $ghostWhite;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  & .URLInputContainer {
+    @include flexRowBetweenCenter;
+    background-color: $white;
+    padding: 1rem;
+    gap: 1rem;
+    color: $dustyGrey;
+    font-weight: 1.2rem;
+    font-size: 300;
+    font-family: $interSans;
+    & input {
+      @include eventInput;
+    }
+  }
+  & p {
+    @include textGroupXsLight;
+    font-weight: 500;
+    font-family: $interSans;
+    color: $dustyGrey;
+  }
+}
+
+.dateContainer {
+  @include flexRowBetweenCenter;
+  flex-wrap: wrap;
+  gap: 1rem;
+  @include noteBook {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+  & .dateTimeBox {
+    @include flexRowStartCenter;
+    gap: 1rem;
+    background-color: $ghostWhite;
+    padding: 2rem;
+    & input {
+      border: none;
+      background-color: $ghostWhite;
+      padding: 0;
+      height: 2.1rem;
+      width: 11rem;
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.selectContainer {
+  padding: 0 2rem 0 0;
+  background-color: $ghostWhite;
+  width: 50%;
+  @include mobile {
+    width: 100%;
+  }
+  & select {
+    background-color: $ghostWhite;
+    width: 100%;
+    border: none;
+    padding: 2rem 0 2rem 1rem;
+    color: $dustyGrey;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: $interSans;
+    border-radius: 0.5rem;
+    @include mobile {
+      width: 100%;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.textContainer {
+  @include tablet {
+    background-color: $ghostWhite;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+  }
+}
+.textArea {
+  border: none;
+  background-color: $ghostWhite;
+  width: 100%;
+  @include textAreaFont;
+  padding: 2rem;
+  &::placeholder {
+    @include textAreaFont;
+  }
+}
+
+// Design
+.logoContainer {
+  width: 16rem;
+  height: 16rem;
+  @include bannerLogoPlaceholder;
+}
+
+.sampleContainer {
+  @include flexRowStartCenter;
+  gap: 1rem;
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.brandColorContainer {
+  background-color: $black;
+  @include colorCircle;
+}
+
+.bannerContainer {
+  width: 31.5rem;
+  height: 16rem;
+  @include bannerLogoPlaceholder;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.marginContainer {
+  margin-top: 2rem;
+}
+
+.colorContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  width: 100%;
+}
+.bgColor {
+  @include colorCircle;
+  background-color: $white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.frontColor {
+  @include colorCircle;
+  background-color: $black;
+}
+
+.widgetContainer {
+  @include flexRowStartCenter;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  & p {
+    margin-bottom: 0;
+  }
+  & img {
+    cursor: pointer;
+  }
+}
+
+.reloadContainer {
+  @include flexRowStartCenter;
+  gap: 2rem;
+  @include mobile {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  & .reloadBox {
+    @include flexRowStartStart;
+    gap: 0.5rem;
+    & img {
+      margin-top: 0.5rem;
+    }
+  }
+}

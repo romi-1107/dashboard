@@ -1,0 +1,70 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.previewFormWrapper {
+  @include flexRowCenterCenter;
+  width: 100%;
+}
+
+.previewFormContainer {
+  background-image: url("../../../assets/icons/mobile-frame.svg");
+  height: 70rem;
+  width: 100%;
+  max-width: 40rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 3rem;
+}
+.previewForm {
+  @include flexColumnBetweenCenter;
+  height: 100%;
+  & > div:first-child {
+    margin-right: auto;
+    visibility: hidden;
+  }
+
+  .galleryContainer {
+    @include flexColumnStartCenter;
+    gap: 1rem;
+    & .timeContainer {
+      margin-top: 2rem;
+      @include flexColumnStartCenter;
+      padding: 0 5rem;
+      & p {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.arrowBox {
+  @include flexColumnCenterCenter;
+  background-color: $darkBlue;
+  min-width: 4rem;
+  min-height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.messageInputContainer {
+  @include flexRowCenterCenter;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  & input {
+    height: 5rem;
+    border-radius: 5rem;
+    background-color: $ghostWhite;
+    border: none;
+    width: calc(100% - 14rem);
+    padding: 2rem;
+    &::placeholder {
+      @include textGroupXsLight;
+      font-family: $interSans;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.menuTabContainer {
+  @include flexRowCenterCenter;
+  gap: 2rem;
+}
+.menuTabWrapper {
+  @include flexColumnBetweenCenter;
+  width: 100%;
+  gap: 1rem;
+  & .singleMenu {
+    @include textGroupSmBold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & .divider {
+    background-color: $darkBlue;
+    height: 0.1rem;
+    width: 100%;
+  }
+}

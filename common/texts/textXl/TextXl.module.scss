@@ -1,0 +1,14 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.textXl {
+  @include textGroupXlBold;
+  color: $darkBlue;
+  @include mobile {
+    @include textGroupSmBold;
+    color: $darkBlue;
+  }
+}

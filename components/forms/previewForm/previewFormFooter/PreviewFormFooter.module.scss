@@ -1,0 +1,15 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.previewFormFooterContainer {
+  @include flexRowCenterCenter;
+  gap: 0.5rem;
+  margin-bottom: 5rem;
+  & a {
+    @include textGroupXsLight;
+    font-family: $interSans;
+  }
+}

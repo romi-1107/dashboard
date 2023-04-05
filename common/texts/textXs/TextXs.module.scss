@@ -1,0 +1,11 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.textXs {
+  @include textGroupXsLight;
+  line-height: 2rem;
+  font-family: $interSans;
+}

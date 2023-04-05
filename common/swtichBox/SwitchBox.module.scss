@@ -1,0 +1,73 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.checkboxCss {
+  display: none;
+}
+
+.switchCss {
+  align-items: center;
+  background-color: $lightGrey;
+  border: 0.1rem solid $darkGrey;
+  border-radius: 50rem;
+  cursor: pointer;
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: relative;
+  user-select: none;
+  width: 80px;
+}
+
+.checkboxCss:checked ~ .switchCss {
+  background-color: $lightBlue;
+}
+
+.checkboxCss:not(:checked) ~ .switch {
+  background-color: $darkGrey;
+}
+
+.switchLeft,
+.switchRight {
+  color: $black;
+  @include textGroupXsLight;
+  font-family: $interSans;
+}
+
+.checkboxCss:checked ~ .switchCss .switchLeft {
+  visibility: hidden;
+}
+
+.checkboxCss:not(:checked) ~ .switchCss .switchRight {
+  visibility: hidden;
+}
+
+.switchCircle {
+  height: 3rem;
+  padding: 0.5rem;
+  position: absolute;
+  transition: all 0.1s linear;
+  width: 3rem;
+}
+
+.checkboxCss:checked ~ .switchCss .switchCircle {
+  left: 0;
+  right: calc(100% - 3rem);
+}
+
+.checkboxCss:not(:checked) ~ .switchCss .switchCircle {
+  left: calc(100% - 3rem);
+  right: 0;
+}
+
+.switchCircleInner {
+  background-color: $black;
+  border-radius: 50%;
+  display: block;
+  height: 100%;
+  width: 100%;
+}

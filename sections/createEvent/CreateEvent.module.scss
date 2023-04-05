@@ -1,0 +1,70 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+
+.mainContainer {
+  margin-top: 6rem;
+  padding: 1rem 2rem 5rem 2rem;
+}
+
+.headingContainer {
+  @include flexRowBetweenCenter;
+  & > a {
+    @include flexRowStartCenter;
+    gap: 1rem;
+  }
+  & > div {
+    @include flexRowStartCenter;
+    gap: 1rem;
+  }
+}
+.setupContainer {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  align-items: flex-start;
+  @include noteBook {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+}
+
+.setupCard {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  @include tablet {
+    padding: 1rem;
+  }
+}
+
+.previewContainer {
+  & p:nth-child(1) {
+    text-align: center;
+  }
+  @include noteBook {
+    display: none;
+  }
+}
+
+.nextPrevContainer {
+  @include flexRowBetweenCenter;
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  & > div {
+    @include flexRowStartCenter;
+    gap: 1rem;
+    cursor: pointer;
+    & p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.createBtnContainer {
+  @include tablet {
+    display: none;
+  }
+}

@@ -1,0 +1,105 @@
+@import "/styles/breakpoints";
+@import "/styles/colors";
+@import "/styles/flexes";
+
+// Texts
+
+@mixin textThin {
+  font-size: 1rem;
+  font-family: $interSans;
+}
+
+@mixin textXs {
+  font-size: 1.2rem;
+  font-family: $timesRoman;
+}
+@mixin textSm {
+  font-size: 1.4rem;
+  font-family: $timesRoman;
+}
+@mixin textMd {
+  font-size: 1.6rem;
+  font-family: $workSans;
+}
+@mixin textLg {
+  font-size: 1.8rem;
+  font-family: $timesRoman;
+}
+@mixin textXl {
+  font-size: 2rem;
+  font-family: $workSans;
+}
+
+// Headings
+@mixin headingSm {
+  font-size: 2.4rem;
+  font-family: $workSans;
+}
+@mixin headingMd {
+  font-size: 3.2rem;
+  font-family: $timesRoman;
+}
+@mixin headingLg {
+  font-size: 7rem;
+  font-family: $timesRoman;
+}
+
+// Text Groups
+
+@mixin textGroupMdBold {
+  @include textMd;
+  font-weight: 700;
+  color: $black;
+}
+@mixin textGroupMdLight {
+  @include textMd;
+  font-weight: 400;
+  color: $black;
+}
+
+@mixin textGroupSmLight {
+  @include textSm;
+  font-family: $interSans;
+  color: $silver;
+}
+@mixin textGroupSmBold {
+  @include textSm;
+  font-family: $interSans;
+  color: $black;
+  font-weight: 700;
+}
+@mixin textGroupLgBold {
+  @include textLg;
+  font-family: $interSans;
+  font-weight: 700;
+  color: $black;
+}
+@mixin textGroupThinBold {
+  @include textThin;
+  font-weight: 700;
+  color: $black;
+}
+@mixin textGroupThinLight {
+  @include textThin;
+  font-weight: 400;
+  color: $silver;
+}
+@mixin textGroupXlBold {
+  @include textXl;
+  font-weight: 700;
+}
+@mixin textGroupXsLight {
+  @include textXs;
+  font-weight: 400;
+  color: $silver;
+}
+
+// Headings Group
+
+@mixin headingGroupSmBold {
+  @include headingSm;
+  font-size: 700;
+  color: $black;
+  line-height: 2.8rem;
+  letter-spacing: -0.03rem;
+}

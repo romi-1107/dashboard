@@ -1,0 +1,14 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.videoListContainer {
+  @include flexRowStartCenter;
+  gap: 2rem;
+  overflow-x: auto;
+}
+.videoListContainer::-webkit-scrollbar {
+  display: none;
+}

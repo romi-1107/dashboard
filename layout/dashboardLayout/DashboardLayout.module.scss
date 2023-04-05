@@ -1,0 +1,20 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+
+.dashboardLayoutContainer {
+  @include flexRowStartStart;
+  background-color: $white;
+  width: 100%;
+  @include noteBook {
+    @include flexColumnStartCenter;
+  }
+}
+.mainSection {
+  margin-left: 32rem;
+  width: 100%;
+  @include noteBook {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,152 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.sidebarContainer {
+  width: 32rem;
+  height: calc(100% - 8rem);
+  background-color: $white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.05);
+  @include noteBook {
+    width: 100%;
+    height: 6rem;
+  }
+}
+
+.sidebarHeader {
+  background-color: $darkBlue;
+  @include flexRowBetweenCenter;
+  height: 6rem;
+  padding: 0 2rem;
+
+  @include mobile {
+    padding: 0 1rem;
+    & img {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+  & .menuBtnContainer {
+    @include noteBook {
+      @include flexRowStartCenter;
+    }
+    & a {
+      display: none;
+      @include noteBook {
+        display: flex;
+      }
+    }
+  }
+  & .menuImg {
+    pointer-events: none;
+    @include noteBook {
+      pointer-events: all;
+      width: 5rem;
+      height: 2rem;
+    }
+  }
+}
+
+.sidebarMenu {
+  padding: 2rem 1rem;
+  @include flexColumnBetweenCenter;
+  height: calc(100% - 5rem);
+  @include noteBook {
+    display: none;
+  }
+}
+.sidebarMenuWrapper {
+  @include flexColumnCenterCenter;
+  gap: 1rem;
+}
+
+.menuBtn {
+  @include flexRowStartCenter;
+  width: 28rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  @include textGroupMdBold;
+  gap: 1rem;
+  & img {
+    margin-left: 4rem;
+  }
+  &:hover {
+    background-color: $waterBlue !important;
+  }
+}
+
+.mobileDrawer {
+  position: fixed;
+  width: 32rem;
+  min-height: 82vh;
+  background-color: $white;
+  top: 6rem;
+  right: 0;
+  z-index: 99;
+  transform: translateX(120%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.05);
+  @include flexColumnBetweenCenter;
+}
+
+.mobileMenuContainer {
+  margin-top: 10rem;
+  @include flexColumnStartCenter;
+  gap: 1rem;
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.bottomContainer {
+  @include flexColumnStartCenter;
+  gap: 2rem;
+  padding: 1rem;
+  & a {
+    width: 28rem;
+    @include flexRowStartCenter;
+    gap: 1rem;
+  }
+  & a:nth-child(1) {
+    & div {
+      width: 5rem;
+      border-radius: 0.5rem;
+      background-color: $black;
+      height: 5rem;
+      @include flexColumnCenterCenter;
+    }
+    & span {
+      @include textGroupMdBold;
+      text-transform: uppercase;
+    }
+  }
+  & a:nth-child(2) {
+    & div:nth-child(1) {
+      @include flexColumnCenterCenter;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 5rem;
+      background-color: $darkBlue;
+      @include textGroupMdBold;
+    }
+    & div:nth-child(2) {
+      @include flexColumnStartStart;
+      gap: 1rem;
+      & span:nth-child(1) {
+        @include textGroupMdBold;
+        text-transform: uppercase;
+      }
+      & span:nth-child(2) {
+        @include textGroupSmLight;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.videoListItemContainer {
+  background-color: $lightGreen;
+  @include flexColumnCenterCenter;
+  min-width: 19.6rem;
+  min-height: 18rem;
+  & img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
