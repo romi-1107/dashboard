@@ -11,11 +11,12 @@ import eventsIcon from "assets/icons/events.svg";
 import analysisIcon from "assets/icons/analysis.svg";
 import { useRouter } from "next/router";
 import shoppingIcon from "assets/icons/shop.svg";
+import { useTranslation } from "next-i18next";
 
 const menuData = [
-  { id: 1, icon: homeIcon, title: "Home", link: "/" },
-  { id: 2, icon: eventsIcon, title: "Events", link: "/events" },
-  { id: 3, icon: analysisIcon, title: "Analysis", link: "/analysis" },
+  { id: 1, icon: homeIcon, title: "home", link: "/" },
+  { id: 2, icon: eventsIcon, title: "events", link: "/events" },
+  { id: 3, icon: analysisIcon, title: "analysis", link: "/analysis" },
 ];
 
 export function Sidebar() {
@@ -38,6 +39,8 @@ export function Sidebar() {
   const [path, setPath] = useState<string>("");
   const router = useRouter();
   const { asPath } = router;
+
+  const { t } = useTranslation("common");
 
   useEffect(() => {
     getMenuId();
@@ -75,7 +78,7 @@ export function Sidebar() {
           style={{ backgroundColor: menuId === id ? "#DAF4FF" : "#F6F6F6" }}
         >
           <Image src={icon} alt="icon" />
-          <span>{title}</span>
+          <span>{t(title)}</span>
         </Link>
       </Fragment>
     ));
@@ -101,7 +104,7 @@ export function Sidebar() {
 
   const renderBtn = (width: string, height: string) => (
     <SolidBtn
-      text="+create event"
+      text="create_event"
       link="/events/create"
       width={width}
       height={height}

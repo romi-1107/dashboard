@@ -1,0 +1,25 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/reuseables";
+@import "styles/flexes";
+@import "styles/text";
+
+.pollResultContainer {
+  background-color: $waterBlue;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  & .headingContainer {
+    @include flexRowBetweenCenter;
+    gap: 1rem;
+    & img {
+      cursor: pointer;
+    }
+  }
+}
+
+.pollQuestionContainer {
+  border-bottom: 0.1rem solid rgba($color: $black, $alpha: 0.2);
+  & p {
+    margin-bottom: 1rem;
+  }
+}

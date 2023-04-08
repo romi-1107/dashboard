@@ -1,0 +1,14 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.eventTagContainer {
+  width: 9rem;
+  height: 2.6rem;
+  border-radius: 5rem;
+  background-color: $waterBlue;
+  @include flexColumnCenterCenter;
+  padding: 1rem;
+  border: 0.1rem solid $darkBlue !important;
+}

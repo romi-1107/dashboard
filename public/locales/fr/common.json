@@ -1,3 +1,7 @@
 {
-  "home": "Maison"
+  "home": "Maison",
+  "events": "Événements",
+  "analysis": "Analyse",
+  "create_event": "+Créer un évènement",
+  "control_room": "Salle de contrôle"
 }

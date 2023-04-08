@@ -17,6 +17,9 @@
   @include noteBook {
     display: none;
   }
+  & p:first-child {
+    text-transform: uppercase;
+  }
 }
 .notificationContainer {
   @include flexRowStartCenter;

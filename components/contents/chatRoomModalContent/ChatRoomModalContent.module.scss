@@ -1,0 +1,113 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.eventModalContentContainer {
+  .imgWrapper {
+    background-color: $aliceBlue;
+    & .imgContainer {
+      width: 100%;
+      @include flexRowEndCenter;
+      padding: 2rem 5rem;
+      & img {
+        width: 1.5rem;
+        height: 1.5rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    & .listContainer {
+      @include flexRowCenterCenter;
+      padding: 3rem 0 5rem 0;
+
+      & p {
+        text-align: center;
+        margin: 0;
+      }
+      & ul {
+        @include flexColumnCenterCenter;
+        gap: 0.5rem;
+        & li {
+          text-align: center;
+          @include textGroupMdLight;
+        }
+      }
+    }
+  }
+}
+
+.contentWrapper {
+  @include flexRowCenterCenter;
+}
+.contentContainer {
+  background-color: $white;
+  max-width: 44rem;
+  @include flexColumnCenterCenter;
+  @include tablet {
+    max-width: 32rem;
+  }
+  & h2 {
+    @include textGroupXlBold;
+    line-height: 3rem;
+    text-align: center;
+    font-family: $interSans;
+    @include tablet {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+    & span {
+      color: $darkBlue;
+      margin: 0 0.5rem;
+    }
+  }
+  & p {
+    @include textGroupMdLight;
+    text-align: center;
+    max-width: 44rem;
+    display: block;
+    margin: 3rem auto 2rem auto;
+    @include tablet {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+.linkContainer {
+  @include flexRowCenterCenter;
+  gap: 2rem;
+  @include mobile {
+    gap: 1rem;
+  }
+  & p {
+    height: 5rem;
+    padding: 2rem;
+    background-color: $brightGrey;
+    border-radius: 0.5rem;
+    max-width: 35rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: $interSans;
+    color: $darkGrey;
+    width: 35rem;
+    @include mobile {
+      width: 25rem;
+    }
+  }
+  & div {
+    border: 0.1rem solid $black;
+    border-radius: 0.5rem;
+    height: 5rem;
+    width: 5rem;
+    @include flexColumnCenterCenter;
+    cursor: pointer;
+  }
+}
+
+.btnContainer {
+  @include flexRowCenterCenter;
+  padding-bottom: 3rem;
+  margin-top: 1rem;
+}

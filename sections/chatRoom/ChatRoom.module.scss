@@ -1,0 +1,185 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/reuseables";
+@import "styles/flexes";
+@import "styles/text";
+
+.mainContainer {
+  margin-top: 6rem;
+  padding: 1rem 2rem 8rem 2rem;
+  background-color: $ghostWhite;
+}
+
+.chatRoomContainer {
+  margin-top: 2rem;
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.05);
+  background-color: $white;
+  padding: 1rem 2rem 5rem 2rem;
+  @include mobile {
+    & h1 {
+      text-align: center;
+    }
+  }
+}
+
+.headingWrapper {
+  @include flexRowBetweenCenter;
+  margin-top: 1rem;
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.headingContainer {
+  @include flexRowStartCenter;
+  & > a {
+    @include flexRowStartCenter;
+    gap: 1rem;
+  }
+}
+
+.eventInfoContainer {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  background-color: $white;
+  padding: 2rem;
+  margin-top: 3rem;
+  @include flexRowBetweenCenter;
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+  & > div {
+    @include leftBorder;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    @include tablet {
+      border: none;
+      width: 100%;
+    }
+  }
+  & > div:first-child {
+    border: none;
+    @include flexColumnStartStart;
+  }
+}
+
+.logoContainer {
+  @include flexRowStartCenter;
+  gap: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  @include tablet {
+    @include flexColumnStartCenter;
+  }
+  & .logoBox {
+    min-width: 7rem;
+    min-height: 7rem;
+    border-radius: 0.5rem;
+    background-color: $silverSand;
+    @include flexColumnCenterCenter;
+    @include tablet {
+      min-width: 100%;
+      min-height: 16rem;
+    }
+    & p:first-child {
+      @include textGroupSmLight;
+      font-family: $interSans;
+    }
+  }
+}
+
+.eventInfo {
+  & p {
+    margin: 1rem 0;
+  }
+}
+
+.linkContainer {
+  @include flexRowStartCenter;
+  border-radius: 0.5rem;
+  background-color: $brightGrey;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  & img {
+    cursor: pointer;
+  }
+  & a {
+    font-weight: 500;
+    font-family: $interSans;
+    color: $darkGrey;
+    font-size: 1.2rem;
+  }
+}
+
+// Statistics
+.statsContainer {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  margin-top: 3rem;
+  gap: 2rem;
+  @include noteBook {
+    grid-template-columns: 100%;
+  }
+}
+
+.statusContainer {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  @include flexRowBetweenCenter;
+  background-color: $white;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  & > div {
+    @include flexColumnStartCenter;
+    gap: 1rem;
+    & p {
+      margin: 0;
+    }
+  }
+}
+
+.imgContainer {
+  background-color: $black;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+  & .prodcutImgContainer {
+    position: absolute;
+    left: 2rem;
+    top: 3rem;
+    & img {
+      background-color: rgba($color: $waterBlue, $alpha: 0.7);
+      width: 9.9rem;
+      height: 10.8rem;
+      padding: 2rem;
+      object-fit: contain;
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: 36.4rem;
+    object-fit: cover;
+  }
+}
+
+.actionContainer {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  background-color: $white;
+}
+.menuWrapper {
+  @include flexRowCenterCenter;
+  margin-top: 2rem;
+}
+.menuContainer {
+  width: 75%;
+}
+
+.btnGroup {
+  @include flexRowCenterCenter;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

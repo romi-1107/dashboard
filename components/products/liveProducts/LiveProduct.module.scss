@@ -1,0 +1,11 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.liveProductsContainer {
+  @include flexRowCenterCenter;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}

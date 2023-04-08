@@ -1,0 +1,21 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.solidBtn {
+  @include flexRowCenterCenter;
+  @include textGroupMdBold;
+  color: $darkBlue;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  font-family: $interSans;
+  border: 0.1rem solid $darkBlue;
+  background-color: $white;
+  gap: 1rem;
+  &:hover {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+}

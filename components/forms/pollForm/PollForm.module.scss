@@ -1,0 +1,26 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.pollForm {
+  margin: 2rem 0;
+  padding: 0 3rem;
+  width: 100%;
+  & input {
+    width: 100%;
+    background-color: $white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    @include textGroupXsLight;
+    font-weight: 300;
+    font-family: $interSans;
+  }
+}
+
+.optionContainer {
+  @include flexRowCenterCenter;
+  gap: 1rem;
+  margin-top: 1rem;
+}

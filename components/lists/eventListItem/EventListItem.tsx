@@ -53,8 +53,8 @@ export function EventListItem({
       </div>
       <div className={actionContainer}>
         <SolidBtn
-          text="Control Room"
-          link="/chatroom"
+          text="control_room"
+          link="/chat-room"
           width="18rem"
           height="5rem"
           bg="black"

@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./TextMd.module.scss";
 
-export function TextMd({ text }: { text: string }) {
+export function TextMd({ text, color }: { text: string; color?: string }) {
   const { textMd } = styles;
-  return <p className={textMd}>{text}</p>;
+  return (
+    <p className={textMd} style={{ color }}>
+      {text}
+    </p>
+  );
 }

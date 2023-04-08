@@ -1,0 +1,25 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/reuseables";
+@import "styles/flexes";
+@import "styles/text";
+
+.pollsContainer {
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+}
+.createPollsContainer {
+  width: 100%;
+  background-color: $waterBlue;
+  @include flexColumnCenterCenter;
+  padding: 3rem;
+}
+
+.pastPollsContainer {
+  margin-top: 3rem;
+}
+
+.createBtnWrapper {
+  margin-top: 1rem;
+  @include flexRowEndCenter;
+}

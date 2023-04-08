@@ -13,7 +13,9 @@ import timeIcon from "assets/icons/time.svg";
 import infoIcon from "assets/icons/info.svg";
 import { SwitchBox } from "common/swtichBox/SwitchBox";
 import reloadIcon from "assets/icons/reload.svg";
-import { Products } from "components/products/Products";
+import { EventProducts } from "components/products/eventProducts/EventProducts";
+import { eventProductsData } from "data/productData";
+import { useTranslation } from "next-i18next";
 
 export function EventForm({ step }: { step: number }) {
   const {
@@ -42,6 +44,7 @@ export function EventForm({ step }: { step: number }) {
     reloadContainer,
     reloadBox,
   } = styles;
+  const { t } = useTranslation("event");
 
   const [inputForm, setInputForm] = useState({
     title: "",
@@ -68,8 +71,8 @@ export function EventForm({ step }: { step: number }) {
         <>
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="Event Information" />
-              <TextXs text="Make a bold statement with your introduction line. The event title will appear on your tab, your social share and the homescreen name. So stand out, make your entrace to the world. " />
+              <TextSm text={t("event_info")} />
+              <TextXs text={t("event_info_detail")} />
             </div>
             <div className={inputContainer}>
               <div className={inputWrapper}>
@@ -125,8 +128,8 @@ export function EventForm({ step }: { step: number }) {
           </div>
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="Date & Time" />
-              <TextXs text="Set the date and time of the event" />
+              <TextSm text={t("date_time")} />
+              <TextXs text={t("date_time_detail")} />
             </div>
             <div className={inputContainer}>
               <div className={dateContainer}>
@@ -153,8 +156,8 @@ export function EventForm({ step }: { step: number }) {
           </div>
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="Host Access" />
-              <TextXs text="Give a specefic host access to the event. This will send a notification to the host." />
+              <TextSm text={t("host_access")} />
+              <TextXs text={t("host_access_detail")} />
             </div>
             <div className={inputContainer}>
               <TextSm text="Link a host" />
@@ -321,7 +324,7 @@ export function EventForm({ step }: { step: number }) {
                 </div>
               </div>
               <div className={marginContainer} />
-              <Products />
+              <EventProducts productsData={eventProductsData} />
             </div>
           </div>
         </>

@@ -1,6 +1,6 @@
 @import "styles/colors.scss";
 @import "styles/breakpoints";
-@import "styles/breakpoints";
+@import "styles/reuseables";
 @import "styles/flexes";
 @import "styles/text";
 
@@ -15,13 +15,6 @@
     @include mobile {
       @include textGroupMdBold;
     }
-  }
-}
-
-@mixin leftBorder {
-  border-left: 0.1rem solid rgba($color: $black, $alpha: 0.2);
-  @include mobile {
-    border-left: 0;
   }
 }
 
@@ -107,11 +100,7 @@
     min-height: auto;
   }
   & .moreContainer {
-    @include flexColumnCenterCenter;
-    width: 5rem;
-    height: 5rem;
-    border: 0.1rem solid $black;
-    border-radius: 0.5rem;
+    @include iconBox;
     & img {
       width: 2.5rem;
       height: 0.5rem;

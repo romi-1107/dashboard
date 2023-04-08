@@ -1,0 +1,12 @@
+{
+  "events": "Events",
+  "go_back_events": "Go back to events",
+  "setup_steps": "Set up your event in 3 easy steps",
+  "event_guide": "How to create an event",
+  "event_info": "Event Information",
+  "event_info_detail": "Make a bold statement with your introduction line. The event title will appear on your tab, your social share and the homescreen name. So stand out, make your entrace to the world.",
+  "date_time": "Date & Time",
+  "date_time_detail": "Set the date and time of the event",
+  "host_access": "Host Access",
+  "host_access_detail": "Give a specefic host access to the event. This will send a notification to the host."
+}

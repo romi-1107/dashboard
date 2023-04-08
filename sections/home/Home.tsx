@@ -6,20 +6,23 @@ import { HeadingSm } from "common/headings/headingSm/HeadingSm";
 import logo2 from "assets/logos/logo-2.svg";
 import Image from "next/image";
 import { VideoList } from "components/lists/videoList/VideoList";
+import { useTranslation } from "next-i18next";
 
 export function Home() {
   const { mainContainer, eventListContainer, headingContainer } = styles;
+
+  const { t } = useTranslation("home");
   return (
     <section>
-      <DashboardLayout navText="home">
+      <DashboardLayout navText={t("home")}>
         <div className={mainContainer}>
           <div className={headingContainer}>
-            <HeadingSm heading="Learn how to get started with live shopping!" />
+            <HeadingSm heading={t("learn")} />
             <Image src={logo2} alt="logo" />
           </div>
           <VideoList />
           <div className={eventListContainer}>
-            <HeadingSm heading="Upcoming Events" />
+            <HeadingSm heading={t("upcoming_events")} />
             <EventList />
           </div>
         </div>

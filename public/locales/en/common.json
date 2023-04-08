@@ -1,3 +1,7 @@
 {
-  "home": "Home"
+  "home": "Home",
+  "events": "Events",
+  "analysis": "Analysis",
+  "create_event": "+Create Event",
+  "control_room": "Control Room"
 }

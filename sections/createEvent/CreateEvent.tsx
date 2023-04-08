@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import styles from "./CreateEvent.module.scss";
 import { DashboardLayout } from "layout/dashboardLayout/DashboardLayout";
-import Image from "next/image";
 import leftArrowIcon from "assets/icons/left-arrow.svg";
-import { TextSm } from "common/texts/textSm/TextSm";
 import rightArrowFillIcon from "assets/icons/right-arrow-fill.svg";
-import { SolidBtn } from "common/buttons/solidBtn/SolidBtn";
-import { MenuTab } from "common/menuTab/MenuTab";
-import { TextXl } from "common/texts/textXl/TextXl";
-import Link from "next/link";
 import rightArrowBlueIcon from "assets/icons/right-arrow-blue.svg";
-import rightArrowIcon from "assets/icons/left-arrow.svg";
 import { EventForm } from "components/forms/eventForm/EventForm";
 import { PreviewForm } from "components/forms/previewForm/PreviewForm";
+import { EventModalContent } from "components/contents/eventModalContet/EventModalContent";
+import { SolidBtn } from "common/buttons/solidBtn/SolidBtn";
+import rightArrowIcon from "assets/icons/left-arrow.svg";
+import { TextSm } from "common/texts/textSm/TextSm";
+import { TextXl } from "common/texts/textXl/TextXl";
+import { MenuTab } from "common/menuTab/MenuTab";
+import { Popup } from "common/popup/Popup";
+import { useTranslation } from "next-i18next";
+import { Modal } from "common/modal/Modal";
+import Image from "next/image";
+import Link from "next/link";
 
 const setupData = [
   { id: 1, menu: "Setup" },
@@ -36,8 +40,11 @@ export function CreateEvent() {
     createBtnContainer,
   } = styles;
 
+  const { t } = useTranslation("event");
+
   const [setupTabMenuId, setSetupTabMenuId] = useState<number>(1);
   const [previewTabMenuId, setPreviewTabMenuId] = useState<number>(1);
+  const [openPopup, setOpenPopup] = useState<boolean>(false);
 
   const setupTabMenuHandler = (id: number) => {
     setSetupTabMenuId(id);
@@ -56,20 +63,26 @@ export function CreateEvent() {
   const nextStepHandler = () => {
     setSetupTabMenuId(setupTabMenuId + 1);
   };
+  const onClosePopup = () => {
+    setOpenPopup(false);
+  };
+  const handlePopupClick = () => {
+    setOpenPopup(true);
+  };
 
   return (
     <section>
-      <DashboardLayout navText="events">
+      <DashboardLayout navText={t("events")}>
         <div className={mainContainer}>
           <div className={headingContainer}>
             <Link href="/events">
               <Image src={leftArrowIcon} alt="arrow" />
-              <TextSm text="Go back to events" />
+              <TextSm text={t("go_back_events")} />
             </Link>
             <div>
               <Image src={rightArrowFillIcon} alt="arrow" />
-              <TextSm text="How to create an event" />
-              <div className={createBtnContainer}>
+              <TextSm text={t("event_guide")} />
+              <div className={createBtnContainer} onClick={handlePopupClick}>
                 <SolidBtn
                   text="+Create Event"
                   link="/events/create"
@@ -87,7 +100,7 @@ export function CreateEvent() {
                 handleTabMenu={setupTabMenuHandler}
                 tabMenuId={setupTabMenuId}
               />
-              <TextXl text="Set up your event in 3 easy steps" />
+              <TextXl text={t("setup_steps")} />
               <EventForm step={setupTabMenuId} />
               <div className={nextPrevContainer}>
                 {setupTabMenuId === 3 || setupTabMenuId === 2 ? (
@@ -121,6 +134,17 @@ export function CreateEvent() {
           </div>
         </div>
       </DashboardLayout>
+      {openPopup && (
+        <>
+          <Popup
+            message="Your event has been created successfully"
+            onClose={onClosePopup}
+          />
+          <Modal>
+            <EventModalContent />
+          </Modal>
+        </>
+      )}
     </section>
   );
 }

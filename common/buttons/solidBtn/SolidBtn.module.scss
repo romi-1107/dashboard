@@ -12,8 +12,15 @@
   text-transform: capitalize;
   font-family: $interSans;
   gap: 1rem;
+  border: none;
+  outline: 0;
+  text-align: center;
+  @include noteBook {
+    font-size: 1.4rem;
+  }
   &:hover {
     background-color: $dustyGrey !important;
     transition: 0.2s ease-in-out;
+    cursor: pointer;
   }
 }

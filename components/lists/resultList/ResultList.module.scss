@@ -1,0 +1,10 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.resultListContainer {
+  @include flexColumnStartCenter;
+  gap: 1rem;
+  margin-top: 2rem;
+}

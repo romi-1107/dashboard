@@ -1,0 +1,87 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.eventModalContentContainer {
+  & .imgContainer {
+    background-color: $aliceBlue;
+    width: 100%;
+    @include flexRowCenterCenter;
+    padding: 5rem 0;
+    & img {
+      width: 21.3rem;
+      height: 23.1rem;
+      @include tablet {
+        width: 18.7rem;
+        height: 28.3rem;
+      }
+    }
+  }
+}
+
+.contentWrapper {
+  @include flexRowCenterCenter;
+}
+.contentContainer {
+  background-color: $white;
+  max-width: 44rem;
+  @include tablet {
+    max-width: 32rem;
+  }
+  & h2 {
+    @include textGroupXlBold;
+    line-height: 3rem;
+    text-align: center;
+    font-family: $interSans;
+    @include tablet {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+    & span {
+      color: $darkBlue;
+      margin: 0 0.5rem;
+    }
+  }
+  & p {
+    @include textGroupMdLight;
+    text-align: center;
+    max-width: 44rem;
+    display: block;
+    margin: 3rem auto 2rem auto;
+    @include tablet {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+.linkContainer {
+  @include flexRowCenterCenter;
+  gap: 2rem;
+  & p {
+    height: 5rem;
+    padding: 2rem;
+    background-color: $brightGrey;
+    border-radius: 0.5rem;
+    max-width: 35rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: $interSans;
+    color: $darkGrey;
+  }
+  & div {
+    border: 0.1rem solid $black;
+    border-radius: 0.5rem;
+    height: 5rem;
+    width: 5rem;
+    @include flexColumnCenterCenter;
+    cursor: pointer;
+  }
+}
+
+.btnContainer {
+  @include flexRowCenterCenter;
+  padding-bottom: 3rem;
+  margin-top: 1rem;
+}

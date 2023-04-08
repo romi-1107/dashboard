@@ -93,7 +93,17 @@
   font-weight: 400;
   color: $silver;
 }
+@mixin textGroupXsBold {
+  @include textXs;
+  font-weight: 700;
+  color: $black;
+}
 
+@mixin textGroupLgBold {
+  @include textLg;
+  font-weight: 700;
+  color: $black;
+}
 // Headings Group
 
 @mixin headingGroupSmBold {

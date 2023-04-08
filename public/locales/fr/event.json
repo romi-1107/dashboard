@@ -1,0 +1,12 @@
+{
+  "events": "Événements",
+  "go_back_events": "Retour aux événements",
+  "setup_steps": "Organisez votre événement en 3 étapes faciles",
+  "event_guide": "Comment créer un événement",
+  "event_info": "Informations sur l'événement",
+  "event_info_detail": "Faites une déclaration audacieuse avec votre ligne d'introduction. Le titre de l'événement apparaîtra sur votre onglet, votre partage social et le nom de l'écran d'accueil. Alors démarquez-vous, faites votre entrée dans le monde.",
+  "date_time": "Date et heure",
+  "date_time_detail": "Définir la date et l'heure de l'événement",
+  "host_access": "Accès hôte",
+  "host_access_detail": "Donnez à un hôte spécifique l'accès à l'événement. Cela enverra une notification à l'hôte."
+}

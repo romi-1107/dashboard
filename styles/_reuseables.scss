@@ -1,0 +1,20 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+@mixin leftBorder {
+  border-left: 0.1rem solid rgba($color: $black, $alpha: 0.2);
+  @include mobile {
+    border-left: 0;
+  }
+}
+
+@mixin iconBox {
+  min-width: 5rem;
+  min-height: 5rem;
+  border-radius: 0.5rem;
+  background-color: $white;
+  border: 0.1rem solid $black;
+  @include flexColumnCenterCenter;
+}

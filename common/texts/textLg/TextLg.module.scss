@@ -1,0 +1,9 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.textLg {
+  @include textGroupLgBold;
+  font-family: $interSans;
+}

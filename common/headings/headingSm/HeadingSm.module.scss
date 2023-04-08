@@ -6,6 +6,7 @@
 
 .headingSm {
   @include headingGroupSmBold;
+  text-transform: capitalize;
   @include mobile {
     @include textGroupLgBold;
   }
