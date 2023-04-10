@@ -1,0 +1,20 @@
+{
+  "go_back_events": "Go back to events",
+  "event": "Event",
+  "duration": "Duration",
+  "unique_viewers": "Unique Viewers",
+  "total_emoticons": "Total Emoticons",
+  "total_comments": "Total Comments",
+  "total_share": "Total Share",
+  "total_chat_session": "Total Chat Session",
+  "engagement_rate": "Engagement rate",
+  "orders": "Orders",
+  "sales_amount": "Sales Amount",
+  "average_order": "Average Order",
+  "conversion_rate": "Conversion rate",
+  "event_performance": "Event Performance",
+  "sales_funnel": "Sales Funnel",
+  "based_unique_viewers": "Based on unique viewers",
+  "bag_flow": "Add to bag flow",
+  "buy_flow": "Buy now flow"
+}

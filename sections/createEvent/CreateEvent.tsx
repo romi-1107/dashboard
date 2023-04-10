@@ -24,9 +24,9 @@ const setupData = [
   { id: 3, menu: "Products" },
 ];
 const previewData = [
-  { id: 1, menu: "Before" },
-  { id: 2, menu: "Live" },
-  { id: 3, menu: "After" },
+  { id: 1, menu: "before" },
+  { id: 2, menu: "live" },
+  { id: 3, menu: "after" },
 ];
 
 export function CreateEvent() {
@@ -84,7 +84,7 @@ export function CreateEvent() {
               <TextSm text={t("event_guide")} />
               <div className={createBtnContainer} onClick={handlePopupClick}>
                 <SolidBtn
-                  text="+Create Event"
+                  text={t("create_event")}
                   link="/events/create"
                   width="18rem"
                   height="5rem"
@@ -120,7 +120,7 @@ export function CreateEvent() {
               </div>
             </div>
             <div className={previewContainer}>
-              <TextXl text="Preview" />
+              <TextXl text={t("preview")} />
               <MenuTab
                 menuTabData={previewData}
                 handleTabMenu={previewTabMenuHandler}
@@ -136,10 +136,7 @@ export function CreateEvent() {
       </DashboardLayout>
       {openPopup && (
         <>
-          <Popup
-            message="Your event has been created successfully"
-            onClose={onClosePopup}
-          />
+          <Popup message="created_successfully" onClose={onClosePopup} />
           <Modal>
             <EventModalContent />
           </Modal>

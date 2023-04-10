@@ -76,7 +76,7 @@ export function EventForm({ step }: { step: number }) {
             </div>
             <div className={inputContainer}>
               <div className={inputWrapper}>
-                <label htmlFor="title">Event Title</label>
+                <label htmlFor="title">{t("event_title")}</label>
                 <input
                   id="title"
                   name="title"
@@ -88,9 +88,9 @@ export function EventForm({ step }: { step: number }) {
               </div>
               <br />
               <div className={charLeftContainer}>
-                <p>0/80 Characters Left</p>
+                <p>0/80 {t("char_left")}</p>
               </div>
-              <TextSm text="Event URL" />
+              <TextSm text={t("event_url")} />
               <div className={URLContainer}>
                 <div className={URLInputContainer}>
                   <div>https://www.jumble.tv</div>
@@ -98,24 +98,20 @@ export function EventForm({ step }: { step: number }) {
                 </div>
                 <div className={charLeftContainer}>
                   <p>
-                    No space or special characters allowed (“;:-_*) Lower case
-                    only
+                    <br /> {t("no_space")}
                   </p>
                 </div>
                 <br />
-                <TextSm
-                  text="Event URL can’t be changed, once created."
-                  color="#48c9ff"
-                />
+                <TextSm text={t("url_not_changed")} color="#48c9ff" />
               </div>
             </div>
           </div>
           <div className={eventForm}>
             <div>
-              <TextSm text="Notes" />
+              <TextSm text={t("notes")} />
               <p className={infoText}>
-                This will be <span>only visible to you</span> Add a Title and
-                Personal Notes to your event.
+                {t("note_before_span")} <span>{t("note_span")}</span>{" "}
+                {t("note_after_span")}
               </p>
             </div>
             <div className={inputContainer}>
@@ -160,11 +156,11 @@ export function EventForm({ step }: { step: number }) {
               <TextXs text={t("host_access_detail")} />
             </div>
             <div className={inputContainer}>
-              <TextSm text="Link a host" />
+              <TextSm text={t("link_host")} />
               <div className={selectContainer}>
                 <select>
                   <option value="" hidden>
-                    Link a host
+                    {t("link_host")}
                   </option>
                   <option>AWS</option>
                   <option>Heroku</option>
@@ -179,8 +175,8 @@ export function EventForm({ step }: { step: number }) {
         <>
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="Brand Identity" />
-              <TextXs text="Upload your brand identity to allow viewers recognize your brand." />
+              <TextSm text={t("brand_identity")} />
+              <TextXs text={t("brand_identity_detail")} />
             </div>
             <div className={inputContainer}>
               <div className={inputWrapper}>
@@ -203,8 +199,8 @@ export function EventForm({ step }: { step: number }) {
           </div>
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="Before event" />
-              <TextXs text="Invite users to join the event! Personalize your page and write a short message to let your audience know what they can expect!" />
+              <TextSm text={t("before_event")} />
+              <TextXs text={t("before_event_detail")} />
             </div>
             <div className={inputContainer}>
               <div className={inputWrapper}>
@@ -227,7 +223,7 @@ export function EventForm({ step }: { step: number }) {
                   placeholder="Volutpat turpis non ligula sit hac odio faucibus. Sit id enim, maecenas vitae. Eleifend vitae, bibendum porttitor sapien. Vulputate sit blandit tristique feugiat odio non egestas aliquam. Congue pellentesque nam amet id facilisis bibendum aliquet dapibus lorem."
                 />
                 <div className={charLeftContainer}>
-                  <p>0/250 Characters Left</p>
+                  <p>0/250 {t("char_left")}</p>
                 </div>
                 <div className={marginContainer} />
                 <TextSm text="Colors" />
@@ -254,8 +250,8 @@ export function EventForm({ step }: { step: number }) {
 
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="After Event" />
-              <TextXs text="Thank everyone for joining the event and redirect them back to your store!" />
+              <TextSm text={t("after_event")} />
+              <TextXs text={t("after_event_detail")} />
             </div>
             <div className={inputContainer}>
               <div className={inputWrapper}>
@@ -269,7 +265,7 @@ export function EventForm({ step }: { step: number }) {
               <br />
 
               <div className={charLeftContainer}>
-                <p>0/250 Characters Left</p>
+                <p>0/250 {t("char_left")}</p>
               </div>
             </div>
           </div>
@@ -279,33 +275,33 @@ export function EventForm({ step }: { step: number }) {
         <>
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="Promo Code" />
-              <TextXs text="By dafault,customers will be able to apply a promo code at checkout" />
+              <TextSm text={t("promo_code")} />
+              <TextXs text={t("promo_code_detail")} />
             </div>
             <div className={inputContainer}>
               <div className={inputWrapper}>
-                <TextSm text="Enable Promo Code" />
+                <TextSm text={t("enable_promo")} />
                 <SwitchBox />
               </div>
             </div>
           </div>
           <div className={eventForm}>
             <div className={textContainer}>
-              <TextSm text="Collection" />
-              <TextXs text="Select the collection for your event" />
+              <TextSm text={t("collection")} />
+              <TextXs text={t("collection_detail")} />
             </div>
             <div className={inputContainer}>
               <div className={reloadContainer}>
-                <TextSm text="Select a collection" />
+                <TextSm text={t("select_collection")} />
                 <div className={reloadBox}>
                   <Image src={reloadIcon} alt="reload" />
-                  <TextXs text="Reload" color="#48c9ff" />
+                  <TextXs text={t("reload")} color="#48c9ff" />
                 </div>
               </div>
               <div className={selectContainer}>
                 <select>
                   <option value="" hidden>
-                    Live Shopping
+                    {t("live_shopping")}
                   </option>
                   <option>Opiton1</option>
                   <option>Option2 </option>
@@ -316,11 +312,11 @@ export function EventForm({ step }: { step: number }) {
               <br />
               <div className={marginContainer} />
               <div className={reloadContainer}>
-                <TextSm text="Live shopping event" />
+                <TextSm text={t("live_shopping_event")} />
                 <TextSm text="(3 products)" color="#48c9ff" />
                 <div className={reloadBox}>
                   <Image src={reloadIcon} alt="reload" />
-                  <TextXs text="Reload" color="#48c9ff" />
+                  <TextXs text={t("reload")} color="#48c9ff" />
                 </div>
               </div>
               <div className={marginContainer} />

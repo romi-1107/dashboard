@@ -31,7 +31,11 @@ function ChatRoomPage() {
 export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "chatroom"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "chat-room",
+        "modal",
+      ])),
     },
   };
 }

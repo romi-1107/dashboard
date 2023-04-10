@@ -1,0 +1,13 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.reportListContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  @include mobile {
+    gap: 1rem;
+  }
+}

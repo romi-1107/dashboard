@@ -1,16 +1,8 @@
 import React from "react";
 import styles from "./TextSm.module.scss";
-export function TextSm({
-  text,
-  color,
-  component,
-  fontWeight,
-}: {
-  text: string;
-  color?: string;
-  component?: string;
-  fontWeight?: string;
-}) {
+import { textTypes } from "types/textTypes";
+
+export function TextSm({ text, color, component, fontWeight }: textTypes) {
   const { textSm } = styles;
 
   if (component === "h2") {

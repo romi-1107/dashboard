@@ -28,16 +28,16 @@ import { ChatRoomModalContent } from "components/contents/chatRoomModalContent/C
 import { productsData } from "data/productData";
 
 const tabMenuData = [
-  { id: 1, menu: "Chat" },
-  { id: 2, menu: "Polls" },
-  { id: 3, menu: "Products" },
+  { id: 1, menu: "chat" },
+  { id: 2, menu: "polls" },
+  { id: 3, menu: "products" },
 ];
 
 const statusData = [
-  { id: 1, title: "Viewers", icon: viewerIcon, value: "-" },
-  { id: 2, title: "Likes", icon: likeIcon, value: "-" },
-  { id: 3, title: "Product Views", icon: productViewIcon, value: "-" },
-  { id: 4, title: "Orders", icon: ordersIcon, value: "-" },
+  { id: 1, title: "viewers", icon: viewerIcon, value: "-" },
+  { id: 2, title: "likes", icon: likeIcon, value: "-" },
+  { id: 3, title: "product_views", icon: productViewIcon, value: "-" },
+  { id: 4, title: "orders", icon: ordersIcon, value: "-" },
 ];
 
 export function ChatRoom() {
@@ -95,20 +95,20 @@ export function ChatRoom() {
 
   return (
     <section>
-      <DashboardLayout navText={t("Chat Room")}>
+      <DashboardLayout navText={t("chat_room")}>
         <div className={mainContainer}>
           <div className={headingWrapper}>
             <div className={headingContainer}>
               <Link href="/events">
                 <Image src={leftArrowIcon} alt="arrow" />
-                <TextSm text="Go back to events" />
+                <TextSm text={t("go_back_events")} />
               </Link>
             </div>
             <div className={btnGroup}>
               <SolidBtn
                 width="18rem"
                 height="5rem"
-                text="Preview Event"
+                text={t("preview_event")}
                 icon={whiteEyeIcon}
                 bg="#48C9FF"
                 onClickSolidBtn={previewEventHandler}
@@ -116,11 +116,12 @@ export function ChatRoom() {
               <OutlineBtn
                 width="18rem"
                 height="5rem"
-                text="Public Link"
+                text={t("public_link")}
                 icon={editIcon}
               />
             </div>
           </div>
+
           <div className={eventInfoContainer}>
             <div>
               <EventTag />
@@ -137,7 +138,7 @@ export function ChatRoom() {
             </div>
             <div>
               <div className={eventInfo}>
-                <TextSm text="Event" color="#777777" fontWeight="400" />
+                <TextSm text={t("event")} color="#777777" fontWeight="400" />
                 <TextLg text="Shahin’s Event" />
                 <div className={linkContainer}>
                   <Image src={copyIcon} alt="copy-icon" />
@@ -149,12 +150,16 @@ export function ChatRoom() {
             </div>
             <div>
               <div className={eventInfo}>
-                <TextSm text="Date" color="#777777" fontWeight="400" />
-                <TextLg text="Friday, May 20, 2021" />
-                <TextSm text="at 5:30 PM" color="#777777" fontWeight="400" />
+                <TextSm text="Note" color="#777777" fontWeight="400" />
+                <TextSm
+                  text="Nisl at vel egestas posuere tristique. Sagittis orci elementum non mus mattis pellentesque. Sed cras euismod ut ut vitae sagittis."
+                  color="#777777"
+                  fontWeight="400"
+                />
               </div>
             </div>
           </div>
+
           <div className={statsContainer}>
             <div>
               <div className={statusContainer}>
@@ -162,19 +167,21 @@ export function ChatRoom() {
                   <div key={id}>
                     <Image src={icon} alt="icon" />
                     <div>{value}</div>
-                    <TextSm text={title} fontWeight="500" />
+                    <TextSm text={t(title)} fontWeight="500" />
                   </div>
                 ))}
                 <div>
                   <TextSm text="CAD" fontWeight="500" />
                   <div>-</div>
-                  <TextSm text="Sales" fontWeight="500" />
+                  <TextSm text={t("sales")} fontWeight="500" />
                 </div>
               </div>
               <div className={imgContainer}>
-                <div className={prodcutImgContainer}>
-                  <Image src={productImg} alt="product-img" />
-                </div>
+                {tabMenuId === 3 && (
+                  <div className={prodcutImgContainer}>
+                    <Image src={productImg} alt="product-img" />
+                  </div>
+                )}
                 <Image src={pic} alt="pic" />
               </div>
             </div>

@@ -24,7 +24,7 @@ export function SolidBtn({
   onClickSolidBtn,
 }: solidBtnTypes) {
   const { solidBtn } = styles;
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   if (link) {
     return (

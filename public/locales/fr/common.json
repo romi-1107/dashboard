@@ -3,5 +3,18 @@
   "events": "Événements",
   "analysis": "Analyse",
   "create_event": "+Créer un évènement",
-  "control_room": "Salle de contrôle"
+  "control_room": "Salle de contrôle",
+  "live_shopping": "Achats en direct",
+  "before": "Avant",
+  "live": "En direct",
+  "after": "Après",
+  "preview": "Aperçu",
+  "chat": "Discuter",
+  "polls": "Les sondages",
+  "products": "Des produits",
+  "live_event": "Événement en direct",
+  "create_poll": "+Créer un sondage",
+  "what_new": "Quoi de neuf?",
+  "chat_room": "Tchat",
+  "go_to_preview": "Aller à l'aperçu"
 }

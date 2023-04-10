@@ -1,0 +1,19 @@
+{
+  "go_back_events": "Retour aux événements",
+  "preview_event": "Aperçu de l'événement",
+  "public_link": "Lien public",
+  "viewers": "Les spectateurs",
+  "likes": "Aime",
+  "product_views": "Vues du produit",
+  "orders": "Ordres",
+  "sales": "Ventes",
+  "chat_room": "Tchat",
+  "filter_by_question": "Filtrer par questions",
+  "make_live_great": "Faisons en sorte que cette vie soit formidable",
+  "event": "Événement",
+  "upcoming_polls": "Prochains sondages",
+  "past_polls": "Sondages passés",
+  "see_result": "Voir le résultat",
+  "no_poll": "Vous n'avez pas encore créé de sondage pour cet événement.",
+  "create_poll": "Créer un sondage"
+}

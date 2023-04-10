@@ -31,7 +31,7 @@ function HomePage() {
 export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "event"])),
+      ...(await serverSideTranslations(locale, ["common", "event", "modal"])),
     },
   };
 }

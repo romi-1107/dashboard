@@ -35,7 +35,7 @@ export function Sidebar() {
   } = styles;
 
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [menuId, setMenuId] = useState<number>(1);
+  const [menuId, setMenuId] = useState<number>(0);
   const [path, setPath] = useState<string>("");
   const router = useRouter();
   const { asPath } = router;
@@ -51,12 +51,15 @@ export function Sidebar() {
       setPath(asPath);
 
       const path = asPath.split("/")[1];
+      console.log(path);
       if (path.length > 0) {
         menuData.forEach(({ id, link }) => {
           if (link.includes(path)) {
             setMenuId(id);
           }
         });
+      } else {
+        setMenuId(1);
       }
     }
   };

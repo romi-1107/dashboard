@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./ChatRoomModalContent.module.scss";
-import mobileFrame from "assets/icons/mobile-frame-2.svg";
 import Image from "next/image";
 import copyIcon from "assets/icons/copy.svg";
 import { SolidBtn } from "common/buttons/solidBtn/SolidBtn";
 import crossIcon from "assets/icons/cross.svg";
 import { TextLg } from "common/texts/textLg/TextLg";
 import qrPic from "assets/icons/qr.svg";
+import { useTranslation } from "next-i18next";
 
 export function ChatRoomModalContent({
   onCloseModal,
@@ -24,6 +24,8 @@ export function ChatRoomModalContent({
     listContainer,
   } = styles;
 
+  const { t } = useTranslation("modal");
+
   return (
     <div className={eventModalContentContainer}>
       <div className={imgWrapper}>
@@ -32,18 +34,18 @@ export function ChatRoomModalContent({
         </div>
         <div className={listContainer}>
           <div>
-            <TextLg text="Preview Checklist:" />
+            <TextLg text={t("preview_checklist")} />
             <ul>
-              <li>Make sure your catalog looks great</li>
-              <li>Practice by connecting the video</li>
-              <li>Interact with the chat</li>
+              <li> {t("checklist_1")} </li>
+              <li> {t("checklist_2")} </li>
+              <li>{t("checklist_3")}</li>
             </ul>
           </div>
         </div>
       </div>
       <div className={contentWrapper}>
         <div className={contentContainer}>
-          <h2>Scan the QR code to preview on your mobile</h2>
+          <h2>{t("scan_qr")}</h2>
           <Image src={qrPic} alt="qr" />
         </div>
       </div>
@@ -59,7 +61,7 @@ export function ChatRoomModalContent({
           link="/chat-room"
           width="18.8rem"
           height="5rem"
-          text="Go To Preview"
+          text={t("go_to_preivew")}
         />
       </div>
     </div>

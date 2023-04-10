@@ -1,17 +1,7 @@
 import React from "react";
 import styles from "./MenuTab.module.scss";
-import { useState, useEffect } from "react";
-
-type menuTabObjProps = {
-  id: number;
-  menu: string;
-};
-
-type menuTabProps = {
-  menuTabData: Array<menuTabObjProps>;
-  handleTabMenu: (id: number) => void;
-  tabMenuId: number;
-};
+import { useTranslation } from "next-i18next";
+import { menuTabProps } from "types/menuTabProps";
 
 export function MenuTab({
   menuTabData,
@@ -23,6 +13,8 @@ export function MenuTab({
   const clickMenuTab = (id: number) => {
     handleTabMenu(id);
   };
+
+  const { t } = useTranslation("common");
 
   return (
     <div className={menuTabContainer}>
@@ -36,7 +28,7 @@ export function MenuTab({
             }}
             onClick={() => clickMenuTab(id)}
           >
-            {menu}
+            {t(menu)}
           </div>
           <div
             style={{

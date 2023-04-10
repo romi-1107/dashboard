@@ -1,0 +1,19 @@
+{
+  "go_back_events": "Go back to events",
+  "preview_event": "Preview Event",
+  "public_link": "Public Link",
+  "viewers": "Viewers",
+  "likes": "Likes",
+  "product_views": "Product Views",
+  "orders": "Orders",
+  "sales": "sales",
+  "chat_room": "Chat Room",
+  "filter_by_question": "Filter by questions",
+  "make_live_great": "Let’s make this live a great one",
+  "event": "Event",
+  "upcoming_polls": "Upcoming Polls",
+  "past_polls": "Past Polls",
+  "see_result": "See Result",
+  "no_poll": "You didn’t created any poll for this event, yet.",
+  "create_poll": "Create Poll"
+}

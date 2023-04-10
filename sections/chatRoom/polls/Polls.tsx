@@ -10,6 +10,7 @@ import { PollForm } from "components/forms/pollForm/PollForm";
 import { PollResult } from "./pollResult/PollResult";
 import { pastPollsData } from "data/pollData";
 import { pollTypes, pollOptionTypes } from "types/pollTypes";
+import { useTranslation } from "next-i18next";
 
 export function Polls() {
   const {
@@ -18,6 +19,7 @@ export function Polls() {
     pastPollsContainer,
     createBtnWrapper,
   } = styles;
+  const { t } = useTranslation("chat-room");
 
   const [createPoll, setCreatePoll] = useState<boolean>(false);
   const [pollId, setPollId] = useState<number>(0);
@@ -51,8 +53,8 @@ export function Polls() {
   const createBtn = (
     <SolidBtn
       width="16rem"
-      height="4rem"
-      text="+Create Poll"
+      height="5rem"
+      text="create_poll"
       bg="black"
       onClickSolidBtn={handleBtnClick}
     />
@@ -60,7 +62,7 @@ export function Polls() {
 
   return (
     <div className={pollsContainer}>
-      <TextLg text={createPoll ? "Create Poll" : "Upcoming Polls"} />
+      <TextLg text={createPoll ? t("create_poll") : t("upcoming_polls")} />
       {pollResult.length ? (
         <>
           <PollResult
@@ -76,17 +78,14 @@ export function Polls() {
           ) : (
             <>
               <Image src={pollsFrame} alt="polls" />
-              <TextSm
-                text="You didn’t created any poll for this event, yet."
-                fontWeight="500"
-              />
+              <TextSm text={t("no_poll")} fontWeight="500" />
             </>
           )}
           {createBtn}
         </div>
       )}
       <div className={pastPollsContainer}>
-        <TextLg text="Past Polls" />
+        <TextLg text={t("past_polls")} />
         <PastPolls
           pollsData={pastPollsData}
           clickPollResult={pollResultHandler}

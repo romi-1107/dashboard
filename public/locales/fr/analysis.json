@@ -1,0 +1,20 @@
+{
+  "go_back_events": "Retour aux événements",
+  "event": "Événement",
+  "duration": "Durée",
+  "unique_viewers": "Spectateurs uniques",
+  "total_emoticons": "Émoticônes totales",
+  "total_comments": "Total des commentaires",
+  "total_share": "Part totale",
+  "total_chat_session": "Nombre total de sessions de chat",
+  "engagement_rate": "Taux d'engagement",
+  "orders": "Ordres",
+  "sales_amount": "Montant des ventes",
+  "average_order": "Commande moyenne",
+  "conversion_rate": "Taux de conversion",
+  "event_performance": "Performance de l'événement",
+  "sales_funnel": "Entonnoir de vente",
+  "based_unique_viewers": "Basé sur des spectateurs uniques",
+  "bag_flow": "Ajouter au panier",
+  "buy_flow": "Achetez maintenant"
+}

@@ -4,9 +4,9 @@ import sendIcon from "assets/icons/send.svg";
 import Image from "next/image";
 import pic1 from "assets/pics/pic-1.jpeg";
 import pic2 from "assets/pics/pic-2.jpeg";
-import { TextSm } from "common/texts/textSm/TextSm";
 import { TextXs } from "common/texts/textXs/TextXs";
 import { SwitchBox } from "common/swtichBox/SwitchBox";
+import { useTranslation } from "next-i18next";
 
 export function Chat() {
   const {
@@ -21,11 +21,13 @@ export function Chat() {
     filterContainer,
     filterWrapper,
   } = styles;
+
+  const { t } = useTranslation("chat-room");
   return (
     <>
       <div className={filterWrapper}>
         <div className={filterContainer}>
-          <TextXs text="Filter by Questions" />
+          <TextXs text={t("filter_by_question")} />
           <SwitchBox />
         </div>
       </div>
@@ -45,7 +47,7 @@ export function Chat() {
           </div>
         </div>
         <div className={inputWrapper}>
-          <input type="text" placeholder="Let’s make this live a great one" />
+          <input type="text" placeholder={t("make_live_great")} />
           <div className={sendBox}>
             <Image src={sendIcon} alt="send-icon" />
           </div>

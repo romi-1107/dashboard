@@ -1,0 +1,39 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/flexes";
+@import "styles/text";
+
+.reportBox {
+  @include flexRowStartCenter;
+  gap: 1rem;
+  @include mobile {
+    gap: 0.5rem;
+  }
+}
+.iconBox {
+  min-width: 4rem;
+  min-height: 4rem;
+  background-color: $darkBlue;
+  border-radius: 50%;
+  @include flexColumnCenterCenter;
+  @include mobile {
+    min-width: 3rem;
+    min-height: 3rem;
+  }
+  & img {
+    width: 2rem;
+    height: 1.4rem;
+    @include mobile {
+      width: 1.5rem;
+      height: 1rem;
+    }
+  }
+}
+.reportValueContainer {
+  & p {
+    margin: 1rem;
+    @include mobile {
+      font-size: 1.2rem;
+    }
+  }
+}

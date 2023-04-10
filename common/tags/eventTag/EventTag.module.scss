@@ -5,10 +5,15 @@
 
 .eventTagContainer {
   width: 9rem;
-  height: 2.6rem;
+  height: 3rem;
   border-radius: 5rem;
+  max-height: 3rem;
   background-color: $waterBlue;
   @include flexColumnCenterCenter;
-  padding: 1rem;
+  padding: 1.4rem 1rem;
   border: 0.1rem solid $darkBlue !important;
+  text-align: center;
+  & p {
+    line-height: 1.1rem;
+  }
 }

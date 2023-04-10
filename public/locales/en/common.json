@@ -3,5 +3,17 @@
   "events": "Events",
   "analysis": "Analysis",
   "create_event": "+Create Event",
-  "control_room": "Control Room"
+  "control_room": "Control Room",
+  "preview": "Preview",
+  "before": "Before",
+  "live": "Live",
+  "after": "After",
+  "chat": "Chat",
+  "polls": "Polls",
+  "products": "Products",
+  "live_event": "Live Event",
+  "create_poll": "+Create Poll",
+  "what_new": "What's new?",
+  "chat_room": "Chat Room",
+  "go_to_preview": "Go To Preview"
 }

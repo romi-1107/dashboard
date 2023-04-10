@@ -5,6 +5,7 @@ import Image from "next/image";
 import copyIcon from "assets/icons/copy.svg";
 import { SolidBtn } from "common/buttons/solidBtn/SolidBtn";
 import videoIcon from "assets/icons/video-2.svg";
+import { useTranslation } from "next-i18next";
 
 export function EventModalContent() {
   const {
@@ -16,6 +17,8 @@ export function EventModalContent() {
     contentContainer,
   } = styles;
 
+  const { t } = useTranslation("modal");
+
   return (
     <div className={eventModalContentContainer}>
       <div className={imgContainer}>
@@ -24,14 +27,12 @@ export function EventModalContent() {
       <div className={contentWrapper}>
         <div className={contentContainer}>
           <h2>
-            Congratulations, <span>your event Summer Collection Live!</span>
+            {t("congratulations")},{" "}
+            <span>{t("your_event")} Summer Collection Live!</span>
             on
-            <span>Thursday, 20 May 2021, 7:00 PM</span> has been created!
+            <span>Thursday, 20 May 2021, 7:00 PM</span> {t("created")}
           </h2>
-          <p>
-            It’s time to show it to the rest of the world! Share your live to
-            your audience:
-          </p>
+          <p>{t("time_show")}</p>
         </div>
       </div>
       <div className={linkContainer}>
@@ -47,7 +48,7 @@ export function EventModalContent() {
           width="18.8rem"
           height="5rem"
           icon={videoIcon}
-          text="Chat Room"
+          text="chat_room"
         />
       </div>
     </div>

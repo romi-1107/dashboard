@@ -60,6 +60,9 @@
 
 .dateContainer {
   @include headingText;
+  & h2 {
+    font-family: $interSans;
+  }
   @include mobile {
     @include flexRowStartCenter;
   }
@@ -87,6 +90,9 @@
       text-transform: uppercase;
       @include textGroupThinBold;
     }
+  }
+  & h2 {
+    font-family: $interSans;
   }
 }
 
