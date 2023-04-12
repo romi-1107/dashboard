@@ -1,0 +1,26 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints";
+@import "styles/reuseables";
+@import "styles/flexes";
+
+.headingContainer {
+  @include flexRowBetweenCenter;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  @include mobile {
+    margin-top: 2rem;
+    justify-content: center;
+    & p {
+      margin: 0;
+    }
+  }
+  & > a {
+    @include flexRowStartCenter;
+    gap: 1rem;
+  }
+  & > div {
+    @include flexRowStartCenter;
+    gap: 1rem;
+  }
+}

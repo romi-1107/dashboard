@@ -1,25 +1,12 @@
 @import "styles/colors.scss";
 @import "styles/breakpoints";
-@import "styles/breakpoints";
+@import "styles/reuseables";
 @import "styles/flexes";
 
 .mainContainer {
-  margin-top: 6rem;
-  padding: 1rem 2rem 5rem 2rem;
-  background-color: $ghostWhite;
+  @include dashboardMainContainer;
 }
 
-.headingContainer {
-  @include flexRowBetweenCenter;
-  & > a {
-    @include flexRowStartCenter;
-    gap: 1rem;
-  }
-  & > div {
-    @include flexRowStartCenter;
-    gap: 1rem;
-  }
-}
 .setupContainer {
   margin-top: 5rem;
   display: grid;
@@ -35,10 +22,10 @@
 
 .setupCard {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
+  padding: 3rem 2rem 2rem 2rem;
   background-color: $white;
   @include tablet {
-    padding: 1rem;
+    padding: 2rem;
   }
 }
 

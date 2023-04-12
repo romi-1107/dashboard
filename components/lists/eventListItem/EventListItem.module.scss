@@ -9,7 +9,7 @@
     @include textGroupSmLight;
     margin: 1rem;
   }
-  & h2 {
+  & h3 {
     @include textGroupLgBold;
     margin: 1rem;
     @include mobile {
@@ -60,7 +60,7 @@
 
 .dateContainer {
   @include headingText;
-  & h2 {
+  & h3 {
     font-family: $interSans;
   }
   @include mobile {
@@ -91,7 +91,7 @@
       @include textGroupThinBold;
     }
   }
-  & h2 {
+  & h3 {
     font-family: $interSans;
   }
 }

@@ -111,6 +111,9 @@
     font-weight: 1.2rem;
     font-size: 300;
     font-family: $interSans;
+    @include laptop {
+      flex-wrap: wrap;
+    }
     & input {
       @include eventInput;
     }

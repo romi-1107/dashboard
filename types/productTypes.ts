@@ -1,6 +1,6 @@
 // Types
 
-export interface productType {
+export interface ProductType {
   id?: number;
   name: string;
   originalPrice: string;
@@ -8,7 +8,7 @@ export interface productType {
   img: string;
 }
 
-export interface liveEventProductsType extends productType {
+export interface LiveEventProductsType extends ProductType {
   views: string;
   productId: number;
 }

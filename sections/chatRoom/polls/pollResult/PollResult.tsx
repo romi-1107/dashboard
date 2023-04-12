@@ -5,11 +5,11 @@ import crossBlueIcon from "assets/icons/cross.svg";
 import Image from "next/image";
 import { TextSm } from "common/texts/textSm/TextSm";
 import { ResultList } from "components/lists/resultList/ResultList";
-import { pollOptionTypes } from "types/pollTypes";
+import { PollOptionTypes } from "types/pollTypes";
 
 type pollResultTypes = {
   onCloseResult: () => void;
-  pollResult: Array<pollOptionTypes>;
+  pollResult: Array<PollOptionTypes>;
 };
 
 export function PollResult({ onCloseResult, pollResult }: pollResultTypes) {

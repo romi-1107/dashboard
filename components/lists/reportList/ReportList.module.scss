@@ -6,7 +6,8 @@
 .reportListContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  row-gap: 1rem;
+  column-gap: 3rem;
   @include mobile {
     gap: 1rem;
   }

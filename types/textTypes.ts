@@ -1,6 +1,7 @@
-export type textTypes = {
+export type TextTypes = {
   text: string;
   color?: string;
   fontWeight?: string;
-  component?: string;
+  fontSize?: string;
+  lineHeight?: string;
 };

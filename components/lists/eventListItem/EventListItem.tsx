@@ -5,20 +5,9 @@ import Image from "next/image";
 import { SolidBtn } from "common/buttons/solidBtn/SolidBtn";
 import moreIcon from "assets/icons/more.svg";
 import videoIcon from "assets/icons/video-white.svg";
+import { EventListTypes } from "types/eventListTypes";
 
-type eventListItemTypes = {
-  date: string;
-  time: string;
-  title: string;
-  label: string;
-};
-
-export function EventListItem({
-  date,
-  time,
-  title,
-  label,
-}: eventListItemTypes) {
+export function EventListItem({ date, time, title, label }: EventListTypes) {
   const {
     eventListItemContainer,
     thumbnailContainer,
@@ -39,13 +28,13 @@ export function EventListItem({
         </div>
         <div className={dateContainer}>
           <p>Date</p>
-          <h2>{date}</h2>
+          <h3>{date}</h3>
           <p>at {time}</p>
         </div>
       </div>
       <div className={eventContainer}>
         <p>Event</p>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <div className={eventName}>
           <Image src={homeIcon} alt="home-icon" />
           <span>{label}</span>

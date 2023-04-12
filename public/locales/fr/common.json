@@ -1,6 +1,7 @@
 {
   "home": "Maison",
   "events": "Événements",
+  "event": "Événement",
   "analysis": "Analyse",
   "create_event": "+Créer un évènement",
   "control_room": "Salle de contrôle",
@@ -16,5 +17,6 @@
   "create_poll": "+Créer un sondage",
   "what_new": "Quoi de neuf?",
   "chat_room": "Tchat",
-  "go_to_preview": "Aller à l'aperçu"
+  "go_to_preview": "Aller à l'aperçu",
+  "go_back_events": "Retour aux événements"
 }

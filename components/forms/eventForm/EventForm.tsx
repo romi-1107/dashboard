@@ -6,16 +6,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import calenderIcon from "assets/icons/calender.svg";
 import Image from "next/image";
-import TimePicker from "rc-time-picker";
-import "rc-time-picker/assets/index.css";
 import moment from "moment";
-import timeIcon from "assets/icons/time.svg";
 import infoIcon from "assets/icons/info.svg";
 import { SwitchBox } from "common/swtichBox/SwitchBox";
 import reloadIcon from "assets/icons/reload.svg";
 import { EventProducts } from "components/products/eventProducts/EventProducts";
 import { eventProductsData } from "data/productData";
 import { useTranslation } from "next-i18next";
+import TimePicker from "react-time-picker/dist/entry.nostyle";
 
 export function EventForm({ step }: { step: number }) {
   const {
@@ -48,8 +46,10 @@ export function EventForm({ step }: { step: number }) {
 
   const [inputForm, setInputForm] = useState({
     title: "",
-    second: "",
-    third: "",
+    url: "",
+    date: "",
+    time: "",
+    host: "",
   });
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [time, setTime] = useState("10:00");
@@ -62,7 +62,7 @@ export function EventForm({ step }: { step: number }) {
     });
   };
 
-  const { title, second, third } = inputForm;
+  const { title } = inputForm;
   const now = moment().hour(12).minute(12);
 
   return (
@@ -143,8 +143,11 @@ export function EventForm({ step }: { step: number }) {
                 <div>
                   <TextSm text="Time" />
                   <div className={dateTimeBox}>
-                    <Image src={timeIcon} alt="time-icon" />
-                    <TimePicker defaultValue={now} />
+                    <TimePicker
+                      value={time}
+                      use12Hours={true}
+                      clearIcon={null}
+                    />
                   </div>
                 </div>
               </div>

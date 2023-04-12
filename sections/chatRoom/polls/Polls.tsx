@@ -9,7 +9,7 @@ import { PastPolls } from "./pastPolls/PastPolls";
 import { PollForm } from "components/forms/pollForm/PollForm";
 import { PollResult } from "./pollResult/PollResult";
 import { pastPollsData } from "data/pollData";
-import { pollTypes, pollOptionTypes } from "types/pollTypes";
+import { PollTypes, PollOptionTypes } from "types/pollTypes";
 import { useTranslation } from "next-i18next";
 
 export function Polls() {
@@ -23,7 +23,7 @@ export function Polls() {
 
   const [createPoll, setCreatePoll] = useState<boolean>(false);
   const [pollId, setPollId] = useState<number>(0);
-  const [pollResult, setPollResult] = useState<pollOptionTypes[]>([]);
+  const [pollResult, setPollResult] = useState<PollOptionTypes[]>([]);
 
   useEffect(() => {
     filterPollData();
@@ -39,7 +39,7 @@ export function Polls() {
   };
 
   const filterPollData = () => {
-    pastPollsData?.forEach((poll: pollTypes) => {
+    pastPollsData?.forEach((poll: PollTypes) => {
       if (poll.id === pollId) {
         setPollResult(poll.options);
       }

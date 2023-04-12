@@ -35,14 +35,18 @@ export function Chat() {
         <div className={chatContainer}>
           <div className={receiverContainer}>
             <div className={rightMsg}>
-              <TextXs text="Welcome everyone" />
+              <div>
+                <TextXs text="Welcome everybody" />
+              </div>
               <Image src={pic2} alt="profile-pic" />
             </div>
           </div>
           <div className={senderContainer}>
             <div className={leftMsg}>
               <Image src={pic1} alt="profile-pic" />
-              <TextXs text="Hi" />
+              <div>
+                <TextXs text="Hi" />
+              </div>
             </div>
           </div>
         </div>

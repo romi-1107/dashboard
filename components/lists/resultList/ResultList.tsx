@@ -1,12 +1,9 @@
 import React from "react";
 import { ResultListItem } from "../resultListItem/ResultListItem";
 import styles from "./ResultList.module.scss";
+import { ResultListTypes } from "types/chatRoomTypes";
 
-type resultListTypes = {
-  pollResult;
-};
-
-export function ResultList({ pollResult }: resultListTypes) {
+export function ResultList({ pollResult }: ResultListTypes) {
   const { resultListContainer } = styles;
 
   return (

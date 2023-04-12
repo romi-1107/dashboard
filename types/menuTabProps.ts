@@ -1,10 +1,10 @@
-type menuTabObjProps = {
+type MenuTabObjProps = {
   id: number;
   menu: string;
 };
 
-export type menuTabProps = {
-  menuTabData: Array<menuTabObjProps>;
+export type MenuTabProps = {
+  menuTabData: Array<MenuTabObjProps>;
   handleTabMenu: (id: number) => void;
   tabMenuId: number;
 };

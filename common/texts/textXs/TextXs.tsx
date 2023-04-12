@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./TextXs.module.scss";
-import { textTypes } from "types/textTypes";
+import { TextTypes } from "types/textTypes";
 
-export function TextXs({ text, color, fontWeight }: textTypes) {
+export function TextXs({ text, color, fontWeight }: TextTypes) {
   const { textXs } = styles;
   return (
     <p className={textXs} style={{ color, fontWeight }}>

@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./MenuTab.module.scss";
 import { useTranslation } from "next-i18next";
-import { menuTabProps } from "types/menuTabProps";
+import { MenuTabProps } from "types/menuTabProps";
 
 export function MenuTab({
   menuTabData,
   handleTabMenu,
   tabMenuId,
-}: menuTabProps) {
+}: MenuTabProps) {
   const { menuTabContainer, divider, menuTabWrapper, singleMenu } = styles;
 
   const clickMenuTab = (id: number) => {

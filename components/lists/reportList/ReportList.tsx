@@ -6,8 +6,8 @@ export function ReportList({ reportData }) {
   const { reportListContainer } = styles;
   return (
     <div className={reportListContainer}>
-      {reportData.map(({ id, title, vlaue, icon }) => (
-        <ReportListItem key={id} title={title} value={vlaue} icon={icon} />
+      {reportData.map(({ id, title, value, icon }) => (
+        <ReportListItem key={id} title={title} value={value} icon={icon} />
       ))}
     </div>
   );

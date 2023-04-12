@@ -7,6 +7,7 @@ import logo2 from "assets/logos/logo-2.svg";
 import Image from "next/image";
 import { VideoList } from "components/lists/videoList/VideoList";
 import { useTranslation } from "next-i18next";
+import { eventsData } from "data/eventsData";
 
 export function Home() {
   const { mainContainer, eventListContainer, headingContainer } = styles;
@@ -23,7 +24,7 @@ export function Home() {
           <VideoList />
           <div className={eventListContainer}>
             <HeadingSm heading={t("upcoming_events")} />
-            <EventList />
+            <EventList data={eventsData} />
           </div>
         </div>
       </DashboardLayout>

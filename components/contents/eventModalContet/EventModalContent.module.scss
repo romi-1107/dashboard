@@ -29,7 +29,7 @@
   @include tablet {
     max-width: 32rem;
   }
-  & h2 {
+  & h3 {
     @include textGroupXlBold;
     line-height: 3rem;
     text-align: center;

@@ -1,9 +1,8 @@
 @import "styles/colors.scss";
 @import "styles/breakpoints";
-@import "styles/breakpoints";
+@import "styles/reuseables";
 @import "styles/flexes";
 
 .mainContainer {
-  margin-top: 6rem;
-  padding: 1rem 2rem 5rem 2rem;
+  @include dashboardMainContainer;
 }

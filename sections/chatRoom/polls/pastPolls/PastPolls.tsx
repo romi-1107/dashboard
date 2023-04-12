@@ -1,12 +1,12 @@
 import { TextXs } from "common/texts/textXs/TextXs";
 import React from "react";
-import { pollTypes } from "types/pollTypes";
+import { PollTypes } from "types/pollTypes";
 import styles from "./PastPolls.module.scss";
 import { useTranslation } from "next-i18next";
 
 type pastPollTypes = {
   clickPollResult: (id: number) => void;
-  pollsData: Array<pollTypes>;
+  pollsData: Array<PollTypes>;
 };
 
 export function PastPolls({ pollsData, clickPollResult }: pastPollTypes) {

@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin laptop {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
 @mixin noteBook {
   @media (max-width: 1024px) {
     @content;

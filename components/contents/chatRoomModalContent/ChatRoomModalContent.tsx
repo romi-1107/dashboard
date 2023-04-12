@@ -45,7 +45,7 @@ export function ChatRoomModalContent({
       </div>
       <div className={contentWrapper}>
         <div className={contentContainer}>
-          <h2>{t("scan_qr")}</h2>
+          <h3>{t("scan_qr")}</h3>
           <Image src={qrPic} alt="qr" />
         </div>
       </div>

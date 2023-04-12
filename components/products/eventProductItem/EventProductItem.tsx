@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./EventProductItem.module.scss";
 import Image from "next/image";
 import { TextSm } from "common/texts/textSm/TextSm";
-import { productType } from "types/productTypes";
+import { ProductType } from "types/productTypes";
 
 export function EventProductItem({
   img,
   name,
   originalPrice,
   discountedPrice,
-}: productType) {
+}: ProductType) {
   const { productItemContainer, price } = styles;
   return (
     <div className={productItemContainer}>

@@ -3,18 +3,9 @@ import styles from "./ChatRoom.module.scss";
 import { DashboardLayout } from "layout/dashboardLayout/DashboardLayout";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-import leftArrowIcon from "assets/icons/left-arrow.svg";
-import Link from "next/link";
 import { TextSm } from "common/texts/textSm/TextSm";
 import { OutlineBtn } from "common/buttons/outlineBtn/OutlineBtn";
 import editIcon from "assets/icons/edit.svg";
-import { EventTag } from "common/tags/eventTag/EventTag";
-import { TextLg } from "common/texts/textLg/TextLg";
-import copyIcon from "assets/icons/copy.svg";
-import viewerIcon from "assets/icons/viewers.svg";
-import likeIcon from "assets/icons/likes.svg";
-import productViewIcon from "assets/icons/product-view.svg";
-import ordersIcon from "assets/icons/orders.svg";
 import pic from "assets/pics/pic.svg";
 import { MenuTab } from "common/menuTab/MenuTab";
 import { Chat } from "./chat/Chat";
@@ -26,30 +17,13 @@ import whiteEyeIcon from "assets/icons/white-eye.svg";
 import { Modal } from "common/modal/Modal";
 import { ChatRoomModalContent } from "components/contents/chatRoomModalContent/ChatRoomModalContent";
 import { productsData } from "data/productData";
-
-const tabMenuData = [
-  { id: 1, menu: "chat" },
-  { id: 2, menu: "polls" },
-  { id: 3, menu: "products" },
-];
-
-const statusData = [
-  { id: 1, title: "viewers", icon: viewerIcon, value: "-" },
-  { id: 2, title: "likes", icon: likeIcon, value: "-" },
-  { id: 3, title: "product_views", icon: productViewIcon, value: "-" },
-  { id: 4, title: "orders", icon: ordersIcon, value: "-" },
-];
+import { tabMenuData, statusData } from "data/chatRoomData";
+import { HeaderLayout } from "layout/headerLayout/HeaderLayout";
+import { EventHeader } from "components/headers/eventHeader/EventHeader";
 
 export function ChatRoom() {
   const {
     mainContainer,
-    headingContainer,
-    headingWrapper,
-    eventInfoContainer,
-    logoContainer,
-    logoBox,
-    eventInfo,
-    linkContainer,
     statsContainer,
     statusContainer,
     actionContainer,
@@ -97,13 +71,7 @@ export function ChatRoom() {
     <section>
       <DashboardLayout navText={t("chat_room")}>
         <div className={mainContainer}>
-          <div className={headingWrapper}>
-            <div className={headingContainer}>
-              <Link href="/events">
-                <Image src={leftArrowIcon} alt="arrow" />
-                <TextSm text={t("go_back_events")} />
-              </Link>
-            </div>
+          <HeaderLayout>
             <div className={btnGroup}>
               <SolidBtn
                 width="18rem"
@@ -120,45 +88,16 @@ export function ChatRoom() {
                 icon={editIcon}
               />
             </div>
-          </div>
+          </HeaderLayout>
 
-          <div className={eventInfoContainer}>
-            <div>
-              <EventTag />
-              <div className={logoContainer}>
-                <div className={logoBox}>
-                  <p>Logo</p>
-                </div>
-                <div className={eventInfo}>
-                  <TextSm text="Date" color="#777777" fontWeight="400" />
-                  <TextLg text="Friday, May 20, 2021" />
-                  <TextSm text="at 5:30 PM" color="#777777" fontWeight="400" />
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className={eventInfo}>
-                <TextSm text={t("event")} color="#777777" fontWeight="400" />
-                <TextLg text="Shahin’s Event" />
-                <div className={linkContainer}>
-                  <Image src={copyIcon} alt="copy-icon" />
-                  <Link href="http://www.jumble.tv/summer_live">
-                    http://www.jumble.tv/summer_live
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className={eventInfo}>
-                <TextSm text="Note" color="#777777" fontWeight="400" />
-                <TextSm
-                  text="Nisl at vel egestas posuere tristique. Sagittis orci elementum non mus mattis pellentesque. Sed cras euismod ut ut vitae sagittis."
-                  color="#777777"
-                  fontWeight="400"
-                />
-              </div>
-            </div>
-          </div>
+          <EventHeader
+            heading="Note"
+            text="Nisl at vel egestas posuere tristique. Sagittis orci elementum non mus mattis pellentesque. Sed cras euismod ut ut vitae sagittis."
+            date="Friday, May 20, 2021"
+            time="5:30 PM"
+            eventName="Shahin's Event"
+            eventLink="http://www.jumble.tv/summer_live"
+          />
 
           <div className={statsContainer}>
             <div>

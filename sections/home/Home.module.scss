@@ -1,13 +1,11 @@
 @import "styles/colors.scss";
 @import "styles/breakpoints";
-@import "styles/breakpoints";
+@import "styles/reuseables";
 @import "styles/flexes";
 
 .mainContainer {
-  margin-top: 6rem;
-  padding: 1rem 2rem 8rem 2rem;
+  @include dashboardMainContainer;
 }
-
 .eventListContainer {
   margin-top: 2rem;
   box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.05);
@@ -16,6 +14,7 @@
   @include mobile {
     & h1 {
       text-align: center;
+      font-family: $interSans;
     }
   }
 }
@@ -28,6 +27,7 @@
     }
     & h1 {
       text-align: center;
+      font-family: $interSans;
     }
   }
 }

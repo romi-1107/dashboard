@@ -1,6 +1,7 @@
 {
   "home": "Home",
   "events": "Events",
+  "event": "Event",
   "analysis": "Analysis",
   "create_event": "+Create Event",
   "control_room": "Control Room",
@@ -15,5 +16,6 @@
   "create_poll": "+Create Poll",
   "what_new": "What's new?",
   "chat_room": "Chat Room",
-  "go_to_preview": "Go To Preview"
+  "go_to_preview": "Go To Preview",
+  "go_back_events": "Go back to events"
 }

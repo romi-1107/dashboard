@@ -3,16 +3,7 @@ import React from "react";
 import styles from "./SolidBtn.module.scss";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-
-type solidBtnTypes = {
-  text: string;
-  icon?: string;
-  link?: string;
-  width: string;
-  height: string;
-  bg: string;
-  onClickSolidBtn?: () => void;
-};
+import { SolidBtnTypes } from "types/buttonTypes";
 
 export function SolidBtn({
   text,
@@ -22,7 +13,7 @@ export function SolidBtn({
   height,
   bg,
   onClickSolidBtn,
-}: solidBtnTypes) {
+}: SolidBtnTypes) {
   const { solidBtn } = styles;
   const { t } = useTranslation("common");
 

@@ -3,6 +3,7 @@ import { TextLg } from "common/texts/textLg/TextLg";
 import { TextXs } from "common/texts/textXs/TextXs";
 import styles from "./AnalysisChart.module.scss";
 import { useTranslation } from "next-i18next";
+import { graphData, graphOptions } from "data/graphData";
 
 import React from "react";
 import {
@@ -24,63 +25,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-export const options = {
-  plugins: {
-    title: {
-      display: false,
-    },
-    legend: {
-      display: false,
-      labels: {
-        color: "white",
-      },
-    },
-  },
-  responsive: true,
-  maintainAspectRatio: false,
-
-  scales: {
-    x: {
-      stacked: true,
-      grid: {
-        color: "black",
-      },
-      ticks: {
-        color: "white",
-      },
-    },
-    y: {
-      stacked: true,
-      grid: {
-        color: "#555555",
-      },
-      ticks: {
-        color: "white",
-      },
-    },
-  },
-};
-
-const labels = ["Shipping Infos", "Order Review", "Payment", "Orders"];
-
-const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: [30, 25, 16, 20],
-      backgroundColor: "#B2FF1F",
-      barThickness: 26,
-    },
-    {
-      label: "Dataset 2",
-      data: [45, 39, 24, 15],
-      backgroundColor: "#48C9FF",
-      barThickness: 26,
-    },
-  ],
-};
 
 export function AnalysisChart() {
   const {
@@ -111,7 +55,7 @@ export function AnalysisChart() {
         </div>
       </div>
       <div className={graphContainer}>
-        <Bar options={options} data={data} />;
+        <Bar options={graphOptions} data={graphData} />;
       </div>
     </div>
   );

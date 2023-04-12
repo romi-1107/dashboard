@@ -6,18 +6,10 @@ import Image from "next/image";
 import crossBlackIcon from "assets/icons/cross-black.svg";
 import { SolidBtn } from "common/buttons/solidBtn/SolidBtn";
 import Link from "next/link";
-import homeIcon from "assets/icons/home.svg";
-import eventsIcon from "assets/icons/events.svg";
-import analysisIcon from "assets/icons/analysis.svg";
 import { useRouter } from "next/router";
 import shoppingIcon from "assets/icons/shop.svg";
 import { useTranslation } from "next-i18next";
-
-const menuData = [
-  { id: 1, icon: homeIcon, title: "home", link: "/" },
-  { id: 2, icon: eventsIcon, title: "events", link: "/events" },
-  { id: 3, icon: analysisIcon, title: "analysis", link: "/analysis" },
-];
+import { menuData } from "data/menuData";
 
 export function Sidebar() {
   const {
@@ -51,7 +43,6 @@ export function Sidebar() {
       setPath(asPath);
 
       const path = asPath.split("/")[1];
-      console.log(path);
       if (path.length > 0) {
         menuData.forEach(({ id, link }) => {
           if (link.includes(path)) {

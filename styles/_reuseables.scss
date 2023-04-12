@@ -17,6 +17,9 @@
   background-color: $white;
   border: 0.1rem solid $black;
   @include flexColumnCenterCenter;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @mixin gridContainer {
@@ -26,5 +29,14 @@
   gap: 2rem;
   @include noteBook {
     grid-template-columns: 100%;
+  }
+}
+
+@mixin dashboardMainContainer {
+  margin-top: 6rem;
+  padding: 1rem 2rem 5rem 2rem;
+  background-color: $ghostWhite;
+  @include mobile {
+    padding: 1rem 1rem 5rem 1rem;
   }
 }

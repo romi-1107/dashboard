@@ -3,9 +3,9 @@ import styles from "./LiveProductItem.module.scss";
 import Image from "next/image";
 import { TextSm } from "common/texts/textSm/TextSm";
 import eyeIcon from "assets/icons/eye.svg";
-import { liveEventProductsType } from "types/productTypes";
+import { LiveEventProductsType } from "types/productTypes";
 
-interface productItemTypes extends liveEventProductsType {
+interface productItemTypes extends LiveEventProductsType {
   onLiveProductItemClick: () => void;
 }
 

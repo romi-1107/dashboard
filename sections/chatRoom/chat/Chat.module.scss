@@ -4,9 +4,42 @@
 @import "styles/flexes";
 @import "styles/text";
 
+// Mixins
+
+@mixin chatWidget($bg, $borderLeftColor, $borderRightColor, $right, $left) {
+  background-color: $bg;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-left: 2.5rem solid $borderLeftColor;
+    border-right: 2.5rem solid $borderRightColor;
+    width: 0;
+    height: 0;
+    right: $right;
+    left: $left;
+    top: 0.5rem;
+  }
+}
+
+@mixin messageBox {
+  @include flexRowStartStart;
+  position: relative;
+  gap: 2rem;
+  & img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+  }
+}
+
+// Classes
+
 .chatWrapper {
   @include flexColumnBetweenCenter;
-  padding-bottom: 2rem;
 }
 .chatContainer {
   margin-top: 1rem;
@@ -15,11 +48,14 @@
   overflow-y: scroll;
   width: calc(100% - 4rem);
   padding: 2rem;
+  @include flexColumnStartStart;
+  gap: 2rem;
 }
 .inputWrapper {
   @include flexRowCenterCenter;
   gap: 1rem;
   width: 70%;
+  margin-top: 2rem;
   @include tablet {
     width: 95%;
   }
@@ -40,18 +76,13 @@
   @include flexRowStartCenter;
   width: 100%;
   & .leftMsg {
-    @include flexRowStartCenter;
-    gap: 1rem;
-    & img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 4rem;
+    @include messageBox;
+    & > div {
+      @include chatWidget($waterBlue, transparent, $waterBlue, auto, 2rem);
     }
     & p {
-      background-color: $waterBlue;
-      padding: 1rem 2rem;
       font-weight: 500;
-      border-radius: 0.5rem 1rem 1rem 0.5rem;
+      margin: 0;
     }
   }
 }
@@ -60,18 +91,13 @@
   @include flexRowEndCenter;
   width: 100%;
   & .rightMsg {
-    @include flexRowStartCenter;
-    gap: 1rem;
-    & img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 4rem;
+    @include messageBox;
+    & > div {
+      @include chatWidget($brightGrey, $brightGrey, transparent, 2rem, auto);
     }
     & p {
-      background-color: $brightGrey;
-      padding: 1rem 2rem;
       font-weight: 500;
-      border-radius: 0.5rem 2rem 2rem 0.5rem;
+      margin: 0;
     }
   }
 }

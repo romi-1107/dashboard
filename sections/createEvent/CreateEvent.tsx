@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./CreateEvent.module.scss";
 import { DashboardLayout } from "layout/dashboardLayout/DashboardLayout";
-import leftArrowIcon from "assets/icons/left-arrow.svg";
 import rightArrowFillIcon from "assets/icons/right-arrow-fill.svg";
 import rightArrowBlueIcon from "assets/icons/right-arrow-blue.svg";
 import { EventForm } from "components/forms/eventForm/EventForm";
@@ -16,23 +15,12 @@ import { Popup } from "common/popup/Popup";
 import { useTranslation } from "next-i18next";
 import { Modal } from "common/modal/Modal";
 import Image from "next/image";
-import Link from "next/link";
-
-const setupData = [
-  { id: 1, menu: "Setup" },
-  { id: 2, menu: "Design" },
-  { id: 3, menu: "Products" },
-];
-const previewData = [
-  { id: 1, menu: "before" },
-  { id: 2, menu: "live" },
-  { id: 3, menu: "after" },
-];
+import { setupData, previewData } from "data/eventsData";
+import { HeaderLayout } from "layout/headerLayout/HeaderLayout";
 
 export function CreateEvent() {
   const {
     mainContainer,
-    headingContainer,
     setupCard,
     setupContainer,
     previewContainer,
@@ -74,12 +62,8 @@ export function CreateEvent() {
     <section>
       <DashboardLayout navText={t("events")}>
         <div className={mainContainer}>
-          <div className={headingContainer}>
-            <Link href="/events">
-              <Image src={leftArrowIcon} alt="arrow" />
-              <TextSm text={t("go_back_events")} />
-            </Link>
-            <div>
+          <HeaderLayout>
+            <>
               <Image src={rightArrowFillIcon} alt="arrow" />
               <TextSm text={t("event_guide")} />
               <div className={createBtnContainer} onClick={handlePopupClick}>
@@ -91,8 +75,9 @@ export function CreateEvent() {
                   bg="#999999"
                 />
               </div>
-            </div>
-          </div>
+            </>
+          </HeaderLayout>
+
           <div className={setupContainer}>
             <div className={setupCard}>
               <MenuTab

@@ -26,12 +26,12 @@ export function EventModalContent() {
       </div>
       <div className={contentWrapper}>
         <div className={contentContainer}>
-          <h2>
+          <h3>
             {t("congratulations")},{" "}
             <span>{t("your_event")} Summer Collection Live!</span>
             on
             <span>Thursday, 20 May 2021, 7:00 PM</span> {t("created")}
-          </h2>
+          </h3>
           <p>{t("time_show")}</p>
         </div>
       </div>

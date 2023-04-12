@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./TextLg.module.scss";
-import { textTypes } from "types/textTypes";
+import { TextTypes } from "types/textTypes";
 
-export function TextLg({ text, color }: textTypes) {
+export function TextLg({ text, color }: TextTypes) {
   const { textLg } = styles;
   return (
     <p className={textLg} style={{ color }}>

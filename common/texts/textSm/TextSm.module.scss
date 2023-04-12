@@ -4,4 +4,5 @@
 
 .textSm {
   @include textGroupSmBold;
+  line-height: 2rem;
 }
